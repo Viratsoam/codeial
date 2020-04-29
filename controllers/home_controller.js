@@ -1,3 +1,5 @@
 module.exports.home = (req,res)=>{
-    return res.end('<h1>Home controller!!</h1>')
+    return res.render('home',{
+        title:"Home"
+    });
 }
