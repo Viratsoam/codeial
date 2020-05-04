@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container emp-profile">
-        <form method="post">
             <div class="row">
                 <div class="col-md-4">
                     <div class="profile-img">
@@ -23,10 +22,10 @@
                 <div class="col-md-6">
                     <div class="profile-head">
                                 <h5>
-                                    Kshiti Ghelani
+                                    <%=user.name%>
                                 </h5>
                                 <h6>
-                                    Web Developer and Designer
+                                    Web Developer
                                 </h6>
                                 <p class="proile-rating">RANKINGS : <span>8/10</span></p>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -39,9 +38,11 @@
                         </ul>
                     </div>
                 </div>
+                
                 <div class="col-md-2">
-                    <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-                </div>
+                    <a href="/users/logout"><button type="submit">Logout</button></a>
+                    <!-- <input type="submit" class="profile-edit-btn"  name="btnAddMore"  value="Logout"/> -->
+                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
@@ -60,7 +61,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="tab-content profile-tab" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="tab-pane fade show active" id="home"  role="tabpanel" aria-labelledby="home-tab">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label>User Id</label>
@@ -74,7 +75,7 @@
                                             <label>Name</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>Kshiti Ghelani</p>
+                                            <p><%=user.name%></p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -82,7 +83,7 @@
                                             <label>Email</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>kshitighelani@gmail.com</p>
+                                            <p><%=user.email%></p>
                                         </div>
                                     </div>
                                     <div class="row">
